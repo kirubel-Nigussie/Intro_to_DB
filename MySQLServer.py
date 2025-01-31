@@ -8,7 +8,7 @@ try:
         )
         mycursor = mydb.cursor()
         sql= f"CREATE DATABASE IF NOT EXISTS alx_book_store"
-except mysql.connector.errors as err:
+except mysql.connector.Error as err:
         print(f"Erroe: {err}")
 finally:
         if mydb.is_connectd():
